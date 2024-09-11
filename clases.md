@@ -7,7 +7,7 @@
 - Grafos bipartitos: se puede separar en dos conjuntos (particiones) de forma que todas las aristas del grafo conectan vertices de distinas particiones.
 - $C_n$: ciclo de n vertices.
 - $K_n$: completo de n vertices.
-- $K_{n, m}$: bipartito con una biparticion de n vertices y otra de m.
+- $K_{n, m}$ bipartito completo: bipartito con una biparticion de n vertices y otra de m, donde se dan todas las aristas posibles en el bipartito.
 - $P_n$: camino de n vertices.
 - $W_n$ (wheel): rueda de n vertices. Se define como un $C_{n-1}$ al que se le agrega un vertice _universal_. Un vertice es _universal_ cuando esta conectado a todos los demás.
 - $P_n$: camino de n vertices.
