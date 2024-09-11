@@ -5,8 +5,6 @@
 3. ¿Todo grafo es el grafo intersección de alguna familia?
 4. idem para grafo containment
 
-Cada tanto tira una pregunta en el aire y dice _¡Esto es ejercicio!_.
-
 Demo que el algoritmo de Berge es correcto:
 Si un grafo es de Helly entonces el algoritmo da verdadero.
 
