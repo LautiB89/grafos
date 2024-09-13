@@ -1,5 +1,22 @@
 # Clase resolviendo ejercicios
 
+1. Probar que los grafos clique-Helly hereditarios son exactamente los grafos que no tienen como subgrafos inducidos a los grafos oculares (3-sun,$\overline{3K_2}$,$\overline{P_4 + P_2}$,$\overline{E}$)
+2. Probar que los grafos containment son exactamente los grafos de comparabilidad (admiten una orientacion transitiva de sus aristas)
+3. Probar que son equivalentes las siguientes subclases de grafos.
+   1. localmente completo
+   2. $P_3$-free
+   3. union de cliques/completos
+4. Probar que los grafos localmente independiente son exactamente los grafos sin triangulos
+5. Probar que un grafo es localmente co-triangle-free sii es claw-free
+6. Probar que cualquier grafo es grafo interseccion y grafo overlap
+7. Mostrar un grafo que no es containment/de comparabilidad
+8. Probar que los grafos cordales son weakly chordal
+9. Probar que los grafos de bloques (grafos interseccion de los bloques de grafos) son exactamentes los grafos donde todos sus bloques son completos.
+10. Probar que los grafos de permutacion son de comparabilidad y de co-comparabilidad (la vuelta tambien es cierta).
+11. Probar que los grafos split son cordales y co-cordales (vale la vuelta tambien).
+12. Probar que los grafos de intervalos son cordales y de co-comparabilidad (la vuelta tambien se cumple).
+13. Probar que cualquier grafo es grafo interseccion de una familia donde cada miembro es la union de uno o varios intervalos de una lınea recta.
+
 ## Ej1
 
 ### Consigna
@@ -105,3 +122,25 @@ Para cada vértice $v\in V$, definimos $N^{\text{out}}_H(v)=\{w | v \rightarrow 
   - $z \not= v$ y $v\rightarrow z \in H$. Como H es transitiva entonces $u \rightarrow z \in H$ y $z \in N^{\text{out}}_H(u)$.
 Por lo cual, (u, v) es una arista del grafo containment de F.
 - (u, v) es una arista del grafo containment de F y sin pérdida de generalidad podemos suponer que $N^{\text{out}}_H(v) \subseteq N^{\text{out}}_H(u)$. Por lo cual, $u \rightarrow v \in H$ y (u, v) es una arista de E.
+
+## Ej3
+
+### Consigna
+
+Probar que son equivalentes las siguientes subclases de grafos:
+
+- Localmente completo
+- $P_3$-Free
+- unión de cliques/completos
+
+## Ej4
+
+### Consigna
+
+Probar que los grafos localmente independientes son exactamente los grafos sin triángulos
+
+## Ej5
+
+### Consigna
+
+Probar que un grafo es localmente co-triangle-free sii es claw-free
