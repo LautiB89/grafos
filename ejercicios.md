@@ -8,16 +8,6 @@
 Demo que el algoritmo de Berge es correcto:
 Si un grafo es de Helly entonces el algoritmo da verdadero.
 
-Supongamos que existe una familia F' intersecante, $F' \subseteq F$ donde $\bigcap_{S_i \in F'}S_i = \emptyset$. F' es minimalmente Helly. Donde F' tiene al menos 3 elementos: $k=|F'| \geq 3$. Sean $\{S_1, \dots, S_k\}$ los subconjuntos de F'.
-
-$$
-F(1) = F'-\{S_1\} \text{ con a un elemento común de toda la flia}\\
-F(2) = F'-\{S_2\} \text{ con b un elemento común de toda la flia} \\
-F(k) = F'-\{S_k\} \text{ con c un elemento común de toda la flia}\\
-$$
-
-Defininiendo $T$ como $\{a, b, c\}$ entonces ver que $F' \subseteq F_T$. ...
-
 ## Complejidad
 
 Sea el tamaño del universo: $m=|U|$

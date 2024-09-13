@@ -8,16 +8,6 @@ Una familia $\{T_i\}_{i \in I}$ de subconjuntos de T satisface la propiedad de H
 
 - Universo asociado: la unión de los conjuntos de una familia.
 
-### Solucion en clase
-
-G no es clique-helly hereditario y no tiene a ningun grafo ocular como subgrafo inducido.
-
-Existe subfamilia intersecante minimal de cliques que no tiene vertices en común (por?).
-
-Es decir, todos tienen intersección dos a dos pero no existe intersección común (entre todos).
-
-Esa subfamilia de cliques tiene que tener al menos 3 cliques. ¡Si tuviera 2 no podría pasar!
-
 ## Retomando
 
 - Weakly Cordal: superclase de cordal. No tiene Hole ni Anti-hole de cualquier longitud.
@@ -29,20 +19,6 @@ Esa subfamilia de cliques tiene que tener al menos 3 cliques. ¡Si tuviera 2 no 
 - Grafo linea: se nota $GL(G)$. Se construye creando un vertice por cada arista de G y conectandolos entre ellos solo si las aristas originales compartian alguna punta.
 - $\Chi'(G)$ (índice cromatico) = $\Chi(GL(G))$. Es lo mismo que el numero cromatico pero aplicado a aristas.
 - Propiedad: $\Delta(G)\geq\Chi'(G)\geq\Delta(G)+1$ ($\Delta$ es el grado máximo de G).
-
-## Demos
-
-Un grafo ocular es FIXME.
-
-Vamos a probarlo por Contrarrecíproca
-
-- ($\Rightarrow$)
-
-Los grafos oculares no son clique helly (CH) (ver pirámide). Luego, un grafo que los contenga no será clique helly hereditario.
-
-- ($\Leftarrow$)
-
-Sup que G es min no CH y no tiene que grafos oculares. Existe una subfamilia intersecante minimal de cliques que no tienen vértices en comun. La subfamilia intersecante minimal tiene que tener al menos 3 cliques ya que si no habría vertices en común (por ser intersecante).
 
 ## Notas de 10-09
 
