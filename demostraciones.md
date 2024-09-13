@@ -120,7 +120,7 @@ Para cada vértice $v\in V$, definimos $N^{\text{out}}_H(v)=\{w | v \rightarrow 
 - (u, v) es una arista de E y sin perdida de generalidad $u\rightarrow v \in H$ es su orientación. Veamos que $N^{\text{out}}_H(v) \subseteq N^{\text{out}}_H(u)$. Para cada vertice $z \in N^{\text{out}}_H(v)$ consideramos los siguientes subcasos:
   - $z = v$, entonces $z = v \in N^{\text{out}}_H(u)$
   - $z \not= v$ y $v\rightarrow z \in H$. Como H es transitiva entonces $u \rightarrow z \in H$ y $z \in N^{\text{out}}_H(u)$.
-Por lo cual, (u, v) es una arista del grafo containment de F.
+    Por lo cual, (u, v) es una arista del grafo containment de F.
 - (u, v) es una arista del grafo containment de F y sin pérdida de generalidad podemos suponer que $N^{\text{out}}_H(v) \subseteq N^{\text{out}}_H(u)$. Por lo cual, $u \rightarrow v \in H$ y (u, v) es una arista de E.
 
 ## Ej3
