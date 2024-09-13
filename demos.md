@@ -1,6 +1,6 @@
 # Clase resolviendo ejercicios
 
-## Ej 1
+## Ej1
 
 ### Consigna
 
@@ -72,3 +72,36 @@ Por otro lado $\{a, b, c\}$ es parte de un clique $Q$ y $Q \not= Q_i$ para $i \i
 - $v_k \in Q_k$ no adyacente a $c$
 
 Claramente, el grafo $G[\{a, b, c, v_1, v_2, v_k\}]$ es ocular y eso es una contradicción.
+
+## Ej2
+
+### Consigna
+
+Probar que los grafos containment son exactamente los grafos de comparabilidad (admiten una orientación transitiva de sus aristas).
+
+### Recordatorios
+
+- Grafos containment: un grafo lo es si se puede modelar con objetos (subconjuntos) tal que dos vertices son adyacentes sii uno de los objetos (subconjuntos) está contenido en el otro.
+- Grafo de comparabilidad: es de comparabilidad si se puede orientar de forma transitiva (si a->b y b->c son aristas entonces a->c tambien).
+
+### Solución
+
+#### Ida
+
+Sea G un grafo containment asociado a una familia de subconjuntos $F = \{S_1, \dots, S_n\}$ tal que dos vértices $v_i, v_j$ del grafo son adyacentes sii los subconjuntos correspondientes $S_i, S_j$ verifican $S_i \subseteq S_j$ o $S_j \subseteq S_i$.
+
+Podemos orientar las aristas de G de la siguiente manera: sea $(v_i, v_j)$ una arista de G, entonces queda $v_i \rightarrow v_j$ si $S_i \subseteq S_j$ o $v_j \rightarrow v_i$ si $S_j \subseteq S_i$. Basicamente, la orientacion respeta el sentido de la contención.
+
+Claramente, la orientación resultante es transitiva ya que la relación de contención entre conjuntos también es transitiva.
+
+#### Vuelta
+
+Sea G=(E, V) un grafo de comparabilidad y H una orientación transitiva de sus aristas. Busquemos una familia de conjuntos para la cual G es su grafo de containment.
+
+Para cada vértice $v\in V$, definimos $N^{\text{out}}_H(v)=\{w | v \rightarrow w \in H\} \cup \{v\}$. Ahora consideramos la familia F donde sus miembros son $N^{\text{out}}_H(v)$ para $v\in V$. Veamos que G es grafo containment de F:
+
+- (u, v) es una arista de E y sin perdida de generalidad $u\rightarrow v \in H$ es su orientación. Veamos que $N^{\text{out}}_H(v) \subseteq N^{\text{out}}_H(u)$. Para cada vertice $z \in N^{\text{out}}_H(v)$ consideramos los siguientes subcasos:
+  - $z = v$, entonces $z = v \in N^{\text{out}}_H(u)$
+  - $z \not= v$ y $v\rightarrow z \in H$. Como H es transitiva entonces $u \rightarrow z \in H$ y $z \in N^{\text{out}}_H(u)$.
+Por lo cual, (u, v) es una arista del grafo containment de F.
+- (u, v) es una arista del grafo containment de F y sin pérdida de generalidad podemos suponer que $N^{\text{out}}_H(v) \subseteq N^{\text{out}}_H(u)$. Por lo cual, $u \rightarrow v \in H$ y (u, v) es una arista de E.
