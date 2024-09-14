@@ -21,7 +21,7 @@
 
 ### Consigna
 
-Probar que los grafos clique-Helly hereditarios son exactamente los grafos que no tienen como subgrafos inducidos a los grafos oculares $(3-sun, \overline{3K_2}, \overline{P_4 + P_2}, \overline{E})$.
+Probar que los grafos clique-Helly hereditarios son exactamente los grafos que no tienen como subgrafos inducidos a los grafos oculares $(3-\text{sun}, \overline{3K_2}, \overline{P_4 + P_2}, \overline{E})$.
 
 ### Recordatorio
 
@@ -105,11 +105,7 @@ Probar que los grafos containment son exactamente los grafos de comparabilidad (
 
 #### Ida
 
-Sea G un grafo containment asociado a una familia de subconjuntos $F = \{S_1, \dots, S_n\}$ tal que dos vértices $v_i, v_j$ del grafo son adyacentes sii los subconjuntos correspondientes $S_i, S_j$ verifican $S_i \subseteq S_j$ o $S_j \subseteq S_i$.
-
-Podemos orientar las aristas de G de la siguiente manera: sea $(v_i, v_j)$ una arista de G, entonces queda $v_i \rightarrow v_j$ si $S_i \subseteq S_j$ o $v_j \rightarrow v_i$ si $S_j \subseteq S_i$. Basicamente, la orientacion respeta el sentido de la contención.
-
-Claramente, la orientación resultante es transitiva ya que la relación de contención entre conjuntos también es transitiva.
+localm
 
 #### Vuelta
 
@@ -129,15 +125,45 @@ Para cada vértice $v\in V$, definimos $N^{\text{out}}_H(v)=\{w | v \rightarrow 
 
 Probar que son equivalentes las siguientes subclases de grafos:
 
-- Localmente completo
-- $P_3$-Free
-- unión de cliques/completos
+1. Localmente completo
+2. $P_3$-Free
+3. unión de cliques/completos
+
+### (1) Localmente completo sii (2) $P_3$-Free
+
+#### $P_3$-Free $\Rightarrow$ Localmente completo
+
+Sea G un grafo $P_3$-Free y v un vértice del grafo.
+Sea $N(v)$ la vecindad abierta de v y $u, w \in N(v)$ (si hay 0 o 1 elementos, $N(v)$ induce $K_0$ y $K_1$ respectivamente).
+
+Ver que el grafo inducido por $N(v)$ en G tiene la arista (u, w) ya que si no la tuviera, podríamos generar un $P_3$ usando (u,v) y (v, w), que existen por ser vecinos de v, y el grafo G no sería $P_3$-Free. Como esto se cumple para cualquier par de vertice en $N(v)$ podemos concluir que todos están conectados entre sí, por lo que inducen un completo en G.
+
+En conclusion, la vecindad abierta de todo vertice en G induce un grafo completo, por lo que G es localmente completo.
+
+#### No $P_3$-Free $\Rightarrow$ No localmente completo (contrareciproca)
+
+Muy parecido al anterior, si suponemos que el grafo G no es $P_3$-Free es porque tiene alguno inducido. Sea uvw ese camino. Si tomamos $N(v)$ vamos a ver que u y w estan contenidos pero el grafo inducido por $N(v)$ en G no es completo, ya que no tiene la arista (u, w). Con esto alcanza para ver que no es localmente completo.
+
+### Resto FIXME
 
 ## Ej4
 
 ### Consigna
 
 Probar que los grafos localmente independientes son exactamente los grafos sin triángulos
+
+### Mi suposición
+
+Asumo que un grafo localmente independiente cumple que el vecindario abierto de todos sus vertices es un conjunto independiente del grafo (ningun vertice está conectado entre si).
+
+Sin triangulos es Triangle-Free o tambien $K_3$-Free
+
+#### Localmente independiente $\Rightarrow$ Triangle-free
+
+Sea G un grafo localmente independiente y v un vertice el grafo. Sabemos que el grafo inducido por $N(v)$ en G no tiene aristas, por lo que si tomamos dos vertices cualesquiera u y w de $N(v)$ sabemos que no van a estar conectados en el inducido y tampoco en G. Como son vecinos de v, tambien sabemos que G tiene las aristas (u, v) y (w, v), por lo que calquier grafo inducido en G por 3 vertices cualquiera u, v y w va a estar en estos casos:
+
+- Ninguno de los 3 es adyacente entre si $\Rightarrow$ no es triangulo
+- Existe una arista en el grafo inducido por los 3 $\Rightarrow$ no es triangulo
 
 ## Ej5
 
