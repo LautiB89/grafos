@@ -144,3 +144,14 @@ Probar que los grafos localmente independientes son exactamente los grafos sin t
 ### Consigna
 
 Probar que un grafo es localmente co-triangle-free sii es claw-free
+
+### Recordatorio
+
+- Co-triangle-free son los grafos G tal que $\overline{G}$ es Triangle-Free.
+- Claw-Free son los grafos que no tienen como subgrafo inducido al Claw (el bipartito completo $K_{1, 3}$)
+
+### Solucion
+
+## Co-Triangle-Free $\Rightarrow$ Claw-Free
+
+## Claw-Free $\Rightarrow$ Co-Triangle-Free
