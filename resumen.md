@@ -86,3 +86,43 @@ Con un K3 y un C6 vemos que
 - Open Neighborhood Helly
 
 Sea $v* \in \bigcap F'$, construyo $F'' = F' \cup \{N(v*)\}_{v* \in \bigcap F'}$ tambien es intersecante. Pero no puede tener intersección etc etc entonces $\bigcap F'' = \emptyset$. Esto demuestra que?
+
+### 17 septiembre
+
+Probó los primeros dos items de la equivalencia:
+
+1. G es closed neighborhood-helly hereditario.
+2. G no tiene como subgrafos inducidos a $C_4, C_5, C_6$ ni 3-sun.
+
+Después probó esto:
+
+1. G es open neighborhood-helly hereditario.
+2. G no tiene como subgrafos inducicdos a $C_6$ ni triangulo.
+
+- G open neighborhood helly no puede contener triangulo
+- Para que no contenga $C_6$ necesitamos pedir que sea open neighborhood helly hereditario.
+Supongamos que tiene triangulo
+
+#### clique helly
+
+Dada una familia de subconjuntos, podemos responder (de forma polinomial?) si es clique helly.
+Pero el problema esta en que solemos responder la pregunta de si o no para un grafo, no la familia. Si mostramos el tamaño de esta familia en funcion de los tamaños del grafo, vemos que es exponencial, por lo que arranca complicado.
+
+Veamos para el caso especial de los grafos oculares, vamos a encontrar un algoritmo en $O(n^2)$.
+
+Va a ser parecido al algoritmo de Berde.
+Definimos una extension:
+$$
+E(v, w, z) = N[v, w] \cup N[w, z] \cup N[v, z] \text{ si los 3 son}\not=\emptyset \\
+E(v, w, z) = \emptyset \text{ si no}
+$$
+
+Vamos a probar la siguiente equivalencia:
+
+1. G es un grafo clique helly
+2. Para cada extensión $E(v, w, z)$ donde v, w, z inducen un triangulo de G, existe $u \in V$ tal que $E(v, w, z) \subseteq N[u]$.
+3. (Esto mejora la complejidad con respecto a 2.)
+
+TOmo 3 elementos del univers
+Consigo todos los cliques que tienen al menos 2 de esos 3.
+Si algun par de vertices de estos 3 no tiene arista, solo quedan como opcion los otros 2 pares (ya que ese par no podría estar en un clique).
